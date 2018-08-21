@@ -1,5 +1,5 @@
 
-DIR_INC = ./include
+DIR_INC = ./inc
 DIR_SRC = ./src
 DIR_OBJ = ./obj
 DIR_BIN = ./bin
