@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf8"?>
+<Scheme>
+	<InitModel>
+		<nFlagChanged>0</nFlagChanged>
+		<nFlagValid>0</nFlagValid>
+		<nRailLineNum>-842150451</nRailLineNum>
+		<fRailLineInteral>-431602080</fRailLineInteral>
+		<fRoadWidth>-431602080</fRoadWidth>
+		<fStartLicheng>-431602080</fStartLicheng>
+		<strRoadType/>
+		<pt3DCenter>(0,0,0)</pt3DCenter>
+		<vecSelectLinePoints3D>[type:vector ,size: 0 ,elements:[ ]]</vecSelectLinePoints3D>
+		<vecTerrainNames>[type:vector ,size: 0 ,elements:[ ]]</vecTerrainNames>
+		<matTerrainPoints3D>[type:vector ,size: 0 ,elements:[ ]]</matTerrainPoints3D>
+	</InitModel>
+	<DesignModel>
+		<nFlagChanged>0</nFlagChanged>
+		<nFlagValid>0</nFlagValid>
+		<vecTin>[type:vector ,size: 0 ,elements:[ ]]</vecTin>
+		<vecDem>[type:vector ,size: 0 ,elements:[ ]]</vecDem>
+		<vecSectionType>[type:vector ,size: 0 ,elements:[ ]]</vecSectionType>
+		<vecSectionLicheng>[type:vector ,size: 0 ,elements:[ ]]</vecSectionLicheng>
+		<vecSectionCenterPoints3D>[type:vector ,size: 0 ,elements:[ ]]</vecSectionCenterPoints3D>
+		<vecRoadbedSecIndex>[type:vector ,size: 0 ,elements:[ ]]</vecRoadbedSecIndex>
+		<vecRoadbedLicheng>[type:vector ,size: 0 ,elements:[ ]]</vecRoadbedLicheng>
+		<vecRoadbedLuji2D>[type:vector ,size: 0 ,elements:[ ]]</vecRoadbedLuji2D>
+		<vecRoadbedCenter3D>[type:vector ,size: 0 ,elements:[ ]]</vecRoadbedCenter3D>
+		<matRoadbedLeftLine2D>[type:vector ,size: 0 ,elements:[ ]]</matRoadbedLeftLine2D>
+		<matRoadbedRightLine2D>[type:vector ,size: 0 ,elements:[ ]]</matRoadbedRightLine2D>
+		<matRetainingWallLeftLine2D>[type:vector ,size: 0 ,elements:[ ]]</matRetainingWallLeftLine2D>
+		<matRetainingWallRightLine2D>[type:vector ,size: 0 ,elements:[ ]]</matRetainingWallRightLine2D>
+	</DesignModel>
+	<AnalysModel>
+		<nFlagChanged>0</nFlagChanged>
+		<nFlagValid>0</nFlagValid>
+		<matTerrainConstraintPoints3D>[type:vector ,size: 0 ,elements:[ ]]</matTerrainConstraintPoints3D>
+		<vecTinWithConstraints>[type:vector ,size: 0 ,elements:[ ]]</vecTinWithConstraints>
+		<vecSectionDirectionPoints>[type:vector ,size: 0 ,elements:[ ]]</vecSectionDirectionPoints>
+		<vecSectionNormPoints>[type:vector ,size: 0 ,elements:[ ]]</vecSectionNormPoints>
+		<matRoadbedLeftInterpLine2D>[type:vector ,size: 0 ,elements:[ ]]</matRoadbedLeftInterpLine2D>
+		<matRoadbedRightInterpLine2D>[type:vector ,size: 0 ,elements:[ ]]</matRoadbedRightInterpLine2D>
+	</AnalysModel>
+	<RenderModel>
+		<nFlagChanged>0</nFlagChanged>
+		<nFlagValid>0</nFlagValid>
+		<vecTerrainNames>[type:vector ,size: 0 ,elements:[ ]]</vecTerrainNames>
+		<vecTerrainTextureFile>[type:vector ,size: 0 ,elements:[ ]]</vecTerrainTextureFile>
+		<vecTerrainDem>[type:vector ,size: 0 ,elements:[ ]]</vecTerrainDem>
+		<vecRoadbedNames>[type:vector ,size: 0 ,elements:[ ]]</vecRoadbedNames>
+		<vecRoadbedTextures>[type:vector ,size: 0 ,elements:[ ]]</vecRoadbedTextures>
+		<strRoadbedLeftBianpoTextureFile/>
+		<strRoadbedRightBianpoTextureFile/>
+		<strRoadbedPingtaiTextureFile/>
+		<strRoadbedLujiTextureFile/>
+		<vecRoadbedTypeLeftTexIndex>-842150451</vecRoadbedTypeLeftTexIndex>
+		<vecRoadbedTypeRightTexIndex>16531264</vecRoadbedTypeRightTexIndex>
+		<strRetainingWallTexture/>
+		<matRoadbedFrontLeftLine3D>[type:vector ,size: 0 ,elements:[ ]]</matRoadbedFrontLeftLine3D>
+		<matRoadbedFrontRightLine3D>[type:vector ,size: 0 ,elements:[ ]]</matRoadbedFrontRightLine3D>
+		<matRoadbedBackLeftLine3D>[type:vector ,size: 0 ,elements:[ ]]</matRoadbedBackLeftLine3D>
+		<matRoadbedBackRightLine3D>[type:vector ,size: 0 ,elements:[ ]]</matRoadbedBackRightLine3D>
+		<vecRetainingWallNames>[type:vector ,size: 0 ,elements:[ ]]</vecRetainingWallNames>
+		<matRetainingWallFrontLeftLine3D>[type:vector ,size: 0 ,elements:[ ]]</matRetainingWallFrontLeftLine3D>
+		<matRetainingWallFrontRightLine3D>[type:vector ,size: 0 ,elements:[ ]]</matRetainingWallFrontRightLine3D>
+		<matRetainingWallBackLeftLine3D>[type:vector ,size: 0 ,elements:[ ]]</matRetainingWallBackLeftLine3D>
+		<matRetainingWallBackRightLine3D>[type:vector ,size: 0 ,elements:[ ]]</matRetainingWallBackRightLine3D>
+		<vecBridgeNames>[type:vector ,size: 0 ,elements:[ ]]</vecBridgeNames>
+		<matBridgeCenterVertices3D>[type:vector ,size: 0 ,elements:[ ]]</matBridgeCenterVertices3D>
+		<matBridgeGroundCenterVertices3D>[type:vector ,size: 0 ,elements:[ ]]</matBridgeGroundCenterVertices3D>
+		<vecTunnelNames>[type:vector ,size: 0 ,elements:[ ]]</vecTunnelNames>
+		<matTunnelCenterVertices3D>[type:vector ,size: 0 ,elements:[ ]]</matTunnelCenterVertices3D>
+		<vecRailtrackNames>[type:vector ,size: 0 ,elements:[ ]]</vecRailtrackNames>
+		<matRailtrackCenterVertices3D>[type:vector ,size: 0 ,elements:[ ]]</matRailtrackCenterVertices3D>
+		<vecStationNames>[type:vector ,size: 0 ,elements:[ ]]</vecStationNames>
+		<matStationCenterVertices3D>[type:vector ,size: 0 ,elements:[ ]]</matStationCenterVertices3D>
+	</RenderModel>
+</Scheme>

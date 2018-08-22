@@ -1,0 +1,8 @@
+['InitModel']
+'nFlagChanged','nFlagValid','nRailLineNum','fRailLineInteral','fRoadWidth','fStartLicheng','strRoadType','pt3DCenter','vecSelectLinePoints3D','vecTerrainNames','matTerrainPoints3D',
+['DesignModel']
+'nFlagChanged','nFlagValid','vecTin','vecDem','vecSectionType','vecSectionLicheng','vecSectionCenterPoints3D','vecRoadbedSecIndex','vecRoadbedLicheng','vecRoadbedLuji2D','vecRoadbedCenter3D','matRoadbedLeftLine2D','matRoadbedRightLine2D','matRetainingWallLeftLine2D','matRetainingWallRightLine2D',
+['AnalysModel']
+'nFlagChanged','nFlagValid','matTerrainConstraintPoints3D','vecTinWithConstraints','vecSectionDirectionPoints','vecSectionNormPoints','matRoadbedLeftInterpLine2D','matRoadbedRightInterpLine2D',
+['RenderModel']
+'nFlagChanged','nFlagValid','vecTerrainNames','vecTerrainTextureFile','vecTerrainDem','vecRoadbedNames','vecRoadbedTextures','strRoadbedLeftBianpoTextureFile','strRoadbedRightBianpoTextureFile','strRoadbedPingtaiTextureFile','strRoadbedLujiTextureFile','vecRoadbedTypeLeftTexIndex','vecRoadbedTypeRightTexIndex','strRetainingWallTexture','matRoadbedFrontLeftLine3D','matRoadbedFrontRightLine3D','matRoadbedBackLeftLine3D','matRoadbedBackRightLine3D','vecRetainingWallNames','matRetainingWallFrontLeftLine3D','matRetainingWallFrontRightLine3D','matRetainingWallBackLeftLine3D','matRetainingWallBackRightLine3D','vecBridgeNames','matBridgeCenterVertices3D','matBridgeGroundCenterVertices3D','vecTunnelNames','matTunnelCenterVertices3D','vecRailtrackNames','matRailtrackCenterVertices3D','vecStationNames','matStationCenterVertices3D',
