@@ -1,3 +1,6 @@
+#ifndef _BIANPO_MODEL_H
+#define _BIANPO_MODEL_H
+
 typedef enum 
 {
 	BIANPO_UNKNOW = 0, // Î´Öª
@@ -136,3 +139,5 @@ typedef struct
 	void* p_parent; // ¸¸½Úµã
 
 } st_bianpo_3d_t;
+
+#endif

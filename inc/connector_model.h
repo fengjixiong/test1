@@ -1,3 +1,6 @@
+#ifndef _CONNECTOR_MODEL_H
+#define _CONNECTOR_MODEL_H
+
 typedef enum
 {
 	ROAD_TYPE_UNKOWN,
@@ -30,3 +33,5 @@ typedef struct
 	st_road_point_t* p_road;
 	st_tunnel_point_t* p_bridge;
 }st_road_tunnel_connect_t;
+
+#endif
