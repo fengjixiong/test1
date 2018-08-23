@@ -1,0 +1,2 @@
+´ò¿ªvs2010ÃüÁîÐÐ
+cl -O -DNO_TIMER -o triangle.c
