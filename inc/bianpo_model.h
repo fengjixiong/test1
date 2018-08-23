@@ -3,140 +3,140 @@
 
 typedef enum 
 {
-	BIANPO_UNKNOW = 0, // Î´Öª
-	BIANPO_LUJI, // Â·»ù
-	BIANPO_LUQIAN // Â·Çµ
+	BIANPO_UNKNOW = 0, // æœªçŸ¥
+	BIANPO_LUJI, // è·¯åŸº
+	BIANPO_LUQIAN // è·¯å ‘
 } enum_bianpo_type_t;
 typedef struct
 {
 	int id;
-	// ÒÔÏÂ²ÎÊıĞèÒª¸³Öµ
-	float top_width; // ÉÏÃæ¿í
-	float bottom_width;  //µ×¿í
-	float height;  //¹µÉî
-	float inner_hudao;//ÄÚ²à»¤µÀ
-	float outer_hudao;//Íâ²à»¤µÀ
-	float inner_pingtai_width; //ÄÚ²àÆ½Ì¨¿í
-	float outer_pingtai_width; //Íâ²àÆ½Ì¨¿í
-	// ÒÔÏÂ²ÎÊıĞèÒª¼ÆËã
-	Point2 outline[8]; // ÂÖÀªÏß
-	// ¹ØÁªÄ£ĞÍ
-	st_line_point_info_t* p_line_info; //Ä£ĞÍËù´¦ÏßÂ·µãĞÅÏ¢
-	void* p_parent; // ¸¸½Úµã
+	// ä»¥ä¸‹å‚æ•°éœ€è¦èµ‹å€¼
+	float top_width; // ä¸Šé¢å®½
+	float bottom_width;  //åº•å®½
+	float height;  //æ²Ÿæ·±
+	float inner_hudao;//å†…ä¾§æŠ¤é“
+	float outer_hudao;//å¤–ä¾§æŠ¤é“
+	float inner_pingtai_width; //å†…ä¾§å¹³å°å®½
+	float outer_pingtai_width; //å¤–ä¾§å¹³å°å®½
+	// ä»¥ä¸‹å‚æ•°éœ€è¦è®¡ç®—
+	Point2 outline[8]; // è½®å»“çº¿
+	// å…³è”æ¨¡å‹
+	st_line_point_info_t* p_line_info; //æ¨¡å‹æ‰€å¤„çº¿è·¯ç‚¹ä¿¡æ¯
+	void* p_parent; // çˆ¶èŠ‚ç‚¹
 
-}st_paishuigou_2d_t;   //ÅÅË®¹µ
+}st_paishuigou_2d_t;   //æ’æ°´æ²Ÿ
 typedef struct
 {
-	int id£»
-	// ÒÔÏÂ²ÎÊıĞèÒª¸³Öµ
+	int idï¼›
+	// ä»¥ä¸‹å‚æ•°éœ€è¦èµ‹å€¼
 	/******** for input ctr *****************/
-	int qs; //Ç½Ê½
-	int qx; //Ç½ĞÍ
-	int   iflt;           //ÊÇ·ñÈ«Â¶Í·      1-ÊÇ    0-·ñ
-	int ifts; //ÊÇ·ñÉèÖÃÍ¹é¾
-	int base;//¸©Ğ±Ê½ÊÇ·ñ¼ÓÉèµ××ù
+	int qs; //å¢™å¼
+	int qx; //å¢™å‹
+	int   iflt;           //æ˜¯å¦å…¨éœ²å¤´      1-æ˜¯    0-å¦
+	int ifts; //æ˜¯å¦è®¾ç½®å‡¸æ¦«
+	int base;//ä¿¯æ–œå¼æ˜¯å¦åŠ è®¾åº•åº§
 	int wgh;
 	/********for input size ****************/
-	double b;   //¶¥¿í
-	double bj1; //Ò»¼¶Ì¨½×¿í¶È
-	double bj2; //¶ş¼¶Ì¨½×¿í¶È
-	double hj1; //Ò»¼¶Ì¨½×¸ß¶È
-	double hj2; //¶ş¼¶Ì¨½×¸ß¶È
-	double H;   //Ç½¸ß
-	double mx;   //ĞØÆÂ
-	double nb;   //±³ÆÂ(¸©Ğ±Ê½too)
-	double x;   //»ù¿íĞ±¶È
-	double a;    //Ç½¶¥µ½Â·¼çµÄ¸ß¶È
-	double mp;   //Ç½¶¥Â·»ùÆÂ¶ÈF
-	//for ºâÖØÊ½:
-	double ns;  //ºâÖØÊ½ÉÏÇ½±³ÆÂ
-	double pt;  //ºâÖØÊ½Æ½Ì¨¿í¶È
-	//for Ğü±ÛÊ½
-	double ts_l; //Í¹é¾¾àÇ½õà¾àÀë
-	double ts_h; //Í¹é¾¸ß¶È
-	double ts_b; //Í¹é¾µ×¿í
+	double b;   //é¡¶å®½
+	double bj1; //ä¸€çº§å°é˜¶å®½åº¦
+	double bj2; //äºŒçº§å°é˜¶å®½åº¦
+	double hj1; //ä¸€çº§å°é˜¶é«˜åº¦
+	double hj2; //äºŒçº§å°é˜¶é«˜åº¦
+	double H;   //å¢™é«˜
+	double mx;   //èƒ¸å¡
+	double nb;   //èƒŒå¡(ä¿¯æ–œå¼too)
+	double x;   //åŸºå®½æ–œåº¦
+	double a;    //å¢™é¡¶åˆ°è·¯è‚©çš„é«˜åº¦
+	double mp;   //å¢™é¡¶è·¯åŸºå¡åº¦F
+	//for è¡¡é‡å¼:
+	double ns;  //è¡¡é‡å¼ä¸Šå¢™èƒŒå¡
+	double pt;  //è¡¡é‡å¼å¹³å°å®½åº¦
+	//for æ‚¬è‡‚å¼
+	double ts_l; //å‡¸æ¦«è·å¢™è¸µè·ç¦»
+	double ts_h; //å‡¸æ¦«é«˜åº¦
+	double ts_b; //å‡¸æ¦«åº•å®½
 	/***********for drawing ******************/
-	double jcdp; //»ù´¡ÂñÉî //1998-11-8
+	double jcdp; //åŸºç¡€åŸ‹æ·± //1998-11-8
 	/********** for caculate coor ************/
 	double xx[14];
 	double yy[14];
-	// ¹ØÁªÄ£ĞÍ
-	st_line_point_info_t* p_line_info; //Ä£ĞÍËù´¦ÏßÂ·µãĞÅÏ¢
-	void* p_parent; // ¸¸½Úµã
+	// å…³è”æ¨¡å‹
+	st_line_point_info_t* p_line_info; //æ¨¡å‹æ‰€å¤„çº¿è·¯ç‚¹ä¿¡æ¯
+	void* p_parent; // çˆ¶èŠ‚ç‚¹
 
 }st_dangtuqiang_2d_t;
 typedef struct
 {
 int id;
-// ÒÔÏÂ²ÎÊıĞèÒª¸³Öµ
-	const char MAX_LEVEL = 7; // ×î¶à7¼¶±ßÆÂ
-	char level_count; // µ±Ç°ÓĞ¼¸¼¶±ßÆÂ£¬¼¶Êı´ÓÂ·ÏßÏòÍâµÄ·½Ïò
-	enum_bianpo_type_t type; // ±ßÆÂÀàĞÍ£¨1-Â·»ù£¬2-Â·Çµ£©
-	float	width [MAX_LEVEL]; // ±ßÆÂ¿í¶È
-	float	height [MAX_LEVEL]; // ±ßÆÂ¸ß¶È
-	float	pingtai_width[MAX_LEVEL ]; // ²ã¼¶Ö®¼äµÄÆ½Ì¨¿í
+// ä»¥ä¸‹å‚æ•°éœ€è¦èµ‹å€¼
+	const char MAX_LEVEL = 7; // æœ€å¤š7çº§è¾¹å¡
+	char level_count; // å½“å‰æœ‰å‡ çº§è¾¹å¡ï¼Œçº§æ•°ä»è·¯çº¿å‘å¤–çš„æ–¹å‘
+	enum_bianpo_type_t type; // è¾¹å¡ç±»å‹ï¼ˆ1-è·¯åŸºï¼Œ2-è·¯å ‘ï¼‰
+	float	width [MAX_LEVEL]; // è¾¹å¡å®½åº¦
+	float	height [MAX_LEVEL]; // è¾¹å¡é«˜åº¦
+	float	pingtai_width[MAX_LEVEL ]; // å±‚çº§ä¹‹é—´çš„å¹³å°å®½
 	
-	// ÒÔÏÂ²ÎÊıĞèÒª¼ÆËã
-	Point2 outline[[MAX_LEVEL][8]j // 8¸öµãÒÑ¾­¿¼ÂÇÁË²¢ÈëÅÅË®¹µºóµÄÂÖÀªÏß
+	// ä»¥ä¸‹å‚æ•°éœ€è¦è®¡ç®—
+	Point2 outline[[MAX_LEVEL][8]j // 8ä¸ªç‚¹å·²ç»è€ƒè™‘äº†å¹¶å…¥æ’æ°´æ²Ÿåçš„è½®å»“çº¿
 
-	// ¹ØÁªÄ£ĞÍ
-	st_line_point_info_t* p_line_info; //Ä£ĞÍËù´¦ÏßÂ·µãĞÅÏ¢
-	const st_paishuigou_2d_t* p_cegou[MAX_LEVEL ]; // Ã¿¸öÆ½Ì¨ÉÏµÄ²à¹µ£¨ÅÅË®¹µ£©
+	// å…³è”æ¨¡å‹
+	st_line_point_info_t* p_line_info; //æ¨¡å‹æ‰€å¤„çº¿è·¯ç‚¹ä¿¡æ¯
+	const st_paishuigou_2d_t* p_cegou[MAX_LEVEL ]; // æ¯ä¸ªå¹³å°ä¸Šçš„ä¾§æ²Ÿï¼ˆæ’æ°´æ²Ÿï¼‰
 	const st_dangtuqiang_2d_t* p_dangtuqiang;
-	void* p_parent; // ¸¸½Úµã
+	void* p_parent; // çˆ¶èŠ‚ç‚¹
 
 }st_bianpo_2d_t;
 
 typedef struct
 {
 	int id;
-	// ÒÔÏÂ±äÁ¿ĞèÒª¸³Öµ
-	Point3 reference_point; // ¿¿ÀïµÄÆ½Ì¨±ßÔµµã
+	// ä»¥ä¸‹å˜é‡éœ€è¦èµ‹å€¼
+	Point3 reference_point; // é é‡Œçš„å¹³å°è¾¹ç¼˜ç‚¹
 
-	// ÒÔÏÂ±äÁ¿ĞèÒª¼ÆËã
-	Point3 start_side_points[20]; // ÆğÊ¼¶ËÆÂ½ÅÏßµã
-	Point3 end_side_points[20]; // ÖÕÖ¹¶ËÆÂ½ÅÏßµã
-    Point3 down_points[20];   // ÓëÂ·ÃæÏà½ÓµÄµã
-	Point3 up_points[20]; // ÓëµØÃæÏà½ÓµÄµã
+	// ä»¥ä¸‹å˜é‡éœ€è¦è®¡ç®—
+	Point3 start_side_points[20]; // èµ·å§‹ç«¯å¡è„šçº¿ç‚¹
+	Point3 end_side_points[20]; // ç»ˆæ­¢ç«¯å¡è„šçº¿ç‚¹
+    Point3 down_points[20];   // ä¸è·¯é¢ç›¸æ¥çš„ç‚¹
+	Point3 up_points[20]; // ä¸åœ°é¢ç›¸æ¥çš„ç‚¹
 
-	//¹ØÁªÄ£ĞÍ
+	//å…³è”æ¨¡å‹
 	const st_paishuigou_2d_t* p_2d _start;
 	const st_paishuigou_2d_t* p_2d _end;
-	void* p_parent; // ¸¸½Úµã
+	void* p_parent; // çˆ¶èŠ‚ç‚¹
 
 }st_paishuigou_3d_t;
 typedef struct
 {
 	int id;
-	// ÒÔÏÂ±äÁ¿ĞèÒª¸³Öµ
-	Point3 reference_point; // ¿¿ÀïµÄÆ½Ì¨±ßÔµµã
+	// ä»¥ä¸‹å˜é‡éœ€è¦èµ‹å€¼
+	Point3 reference_point; // é é‡Œçš„å¹³å°è¾¹ç¼˜ç‚¹
 	
-	// ÒÔÏÂ±äÁ¿ĞèÒª¼ÆËã
-	Point3 start_side_points[20]; // ÆğÊ¼¶ËÆÂµã
-	Point3 end_side_points[20]; // ÖÕÖ¹¶ËÆÂµã
+	// ä»¥ä¸‹å˜é‡éœ€è¦è®¡ç®—
+	Point3 start_side_points[20]; // èµ·å§‹ç«¯å¡ç‚¹
+	Point3 end_side_points[20]; // ç»ˆæ­¢ç«¯å¡ç‚¹
 
-	//¹ØÁªÄ£ĞÍ
+	//å…³è”æ¨¡å‹
 	const st_dangtuqiang_2d_t* p_2d _start;
 	const st_dangtuqiang_2d_t* p_2d _end;
-	void* p_parent; // ¸¸½Úµã
+	void* p_parent; // çˆ¶èŠ‚ç‚¹
 
 }st_dangtuqiang_3d_t;
 typedef struct
 {
 	int id;
-	// ÒÔÏÂ²ÎÊıĞèÒª¸³Öµ
-	Point3 reference_point; // ²Î¿¼µãÊÀ½ç×ø±ê£¨Ä¬ÈÏÎªÓëÂ·Ãæ½Ó´¥µÄµã£©
+	// ä»¥ä¸‹å‚æ•°éœ€è¦èµ‹å€¼
+	Point3 reference_point; // å‚è€ƒç‚¹ä¸–ç•Œåæ ‡ï¼ˆé»˜è®¤ä¸ºä¸è·¯é¢æ¥è§¦çš„ç‚¹ï¼‰
 			
-	// ÒÔÏÂ²ÎÊıĞèÒª¼ÆËã
-	Point3 start_side_points[20]; // ÆğÊ¼¶ËÆÂ½ÅÏßµã
-	Point3 end_side_points[20]; // ÖÕÖ¹¶ËÆÂ½ÅÏßµã
-    Point3 road_points[20];   // ÓëÂ·ÃæÏà½ÓµÄµã
-	Point3 ground_points[20]; // ÓëµØÃæÏà½ÓµÄµã
+	// ä»¥ä¸‹å‚æ•°éœ€è¦è®¡ç®—
+	Point3 start_side_points[20]; // èµ·å§‹ç«¯å¡è„šçº¿ç‚¹
+	Point3 end_side_points[20]; // ç»ˆæ­¢ç«¯å¡è„šçº¿ç‚¹
+    Point3 road_points[20];   // ä¸è·¯é¢ç›¸æ¥çš„ç‚¹
+	Point3 ground_points[20]; // ä¸åœ°é¢ç›¸æ¥çš„ç‚¹
 
-	//¹ØÁªÄ£ĞÍ£¬Ğë¸³Öµ
+	//å…³è”æ¨¡å‹ï¼Œé¡»èµ‹å€¼
 	const st_bianpo_2d_t* p_2d _start;
 	const st_bianpo_2d_t* p_2d _end;
-	void* p_parent; // ¸¸½Úµã
+	void* p_parent; // çˆ¶èŠ‚ç‚¹
 
 } st_bianpo_3d_t;
 

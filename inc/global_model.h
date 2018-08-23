@@ -13,23 +13,23 @@ typedef struct
 
 typedef struct
 {
-	int licheng, // Àï³Ì
-	Point3 center_point, // Â·ÏßÖĞĞÄµã£¨²ÉÑùµã£©
-	int road_surface_id, // Â·ÃæID
-	int bianpo_id, // ±ßÆÂID
-	int dangtuqiang_id // µ²ÍÁÇ½ID
+	int licheng, // é‡Œç¨‹
+	Point3 center_point, // è·¯çº¿ä¸­å¿ƒç‚¹ï¼ˆé‡‡æ ·ç‚¹ï¼‰
+	int road_surface_id, // è·¯é¢ID
+	int bianpo_id, // è¾¹å¡ID
+	int dangtuqiang_id // æŒ¡åœŸå¢™ID
 } st_licheng_info_t;
 st_licheng_info_t table_licheng_info[MAX_POINTS];
 
 typedef struct
 {
 	int id, // ID
-	enum_struct_type type, // ID¶ÔÓ¦µÄÀàĞÍ
-	void* pointer // ID¶ÔÓ¦µÄÖ¸Õë
+	enum_struct_type type, // IDå¯¹åº”çš„ç±»å‹
+	void* pointer // IDå¯¹åº”çš„æŒ‡é’ˆ
 }st_id_info_t;
 st_id_info_t table_id_info[MAX_POINTS*10];
 
-//²éÕÒÀï³Ì¶ÔÓ¦µÄ×ÊÔ´	
-int find_licheng_info(st_licheng_info** info_table, int licheng);	//·µ»Øinfo_tableµÄĞĞ£¬-1±íÊ¾Ê§°Ü
-//²éÕÒID¶ÔÓ¦µÄÖ¸Õë	
-int find_id_info(st_id_info** info_table, int id);	//·µ»Øinfo_tableµÄĞĞ£¬-1±íÊ¾Ê§°Ü
+//æŸ¥æ‰¾é‡Œç¨‹å¯¹åº”çš„èµ„æº	
+int find_licheng_info(st_licheng_info** info_table, int licheng);	//è¿”å›info_tableçš„è¡Œï¼Œ-1è¡¨ç¤ºå¤±è´¥
+//æŸ¥æ‰¾IDå¯¹åº”çš„æŒ‡é’ˆ	
+int find_id_info(st_id_info** info_table, int id);	//è¿”å›info_tableçš„è¡Œï¼Œ-1è¡¨ç¤ºå¤±è´¥

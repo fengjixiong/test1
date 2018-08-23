@@ -1,38 +1,38 @@
 typedef enum
 {
-	INTERPLATE_UNKOWN = 0, // Î´Öª
-	INTERPLATE_LINEAR, // ÏßĞÔ
-	INTERPLATE_QUADRIC, // ¶ş´Î
-	INTERPLATE_CARDINAL // Èı´Î
+	INTERPLATE_UNKOWN = 0, // æœªçŸ¥
+	INTERPLATE_LINEAR, // çº¿æ€§
+	INTERPLATE_QUADRIC, // äºŒæ¬¡
+	INTERPLATE_CARDINAL // ä¸‰æ¬¡
 }enum_interplate_type_t;
 typedef struct
 {
-	// ÒÔÏÂ³ÉÔ±±äÁ¿ĞèÒªÍâ²¿¸³Öµ
-	const int MAX_POINTS=10000; // ×î¶àÖ§³ÖµÄ²ÉÑùµãÊı
-	const int INTERPLATE_NUM = 10; // Ã¿2¸ö²ÉÑùµãÖ®¼äµÄ²åÖµ¸öÊı
-	enum_interplate_type_t INTERPLATE_TYPE = INTERPLATE_CARDINAL; // ²åÖµ·½Ê½
-	Point3 center_points[MAX_POINTS]; // ²ÉÑùµÄÖĞĞÄµã
-	int center_licheng[MAX_POINTS]; // ÖĞĞÄµãÀï³Ì
+	// ä»¥ä¸‹æˆå‘˜å˜é‡éœ€è¦å¤–éƒ¨èµ‹å€¼
+	const int MAX_POINTS=10000; // æœ€å¤šæ”¯æŒçš„é‡‡æ ·ç‚¹æ•°
+	const int INTERPLATE_NUM = 10; // æ¯2ä¸ªé‡‡æ ·ç‚¹ä¹‹é—´çš„æ’å€¼ä¸ªæ•°
+	enum_interplate_type_t INTERPLATE_TYPE = INTERPLATE_CARDINAL; // æ’å€¼æ–¹å¼
+	Point3 center_points[MAX_POINTS]; // é‡‡æ ·çš„ä¸­å¿ƒç‚¹
+	int center_licheng[MAX_POINTS]; // ä¸­å¿ƒç‚¹é‡Œç¨‹
 
-	// ÒÔÏÂ³ÉÔ±±äÁ¿ÊÇÍ¨¹ı¼ÆËãµÃ³ö
-	int id; // ×Ô¶¯Éú³É
-	Point3 directions[MAX_POINTS]; // ·½Ïò
-	Point3 normals[MAX_POINTS]; // ·¨ÏòÁ¿
-	Point3 interplate_points[MAX_POINTS * INTERPLATE_NUM]; // ²åÖµµã
-	Point3 interplate_direction[MAX_POINTS* INTERPLATE_NUM]; // ²åÖµµã·½Ïò
-	Point3 interplate_normal[MAX_POINTS* INTERPLATE_NUM]; // ²åÖµµã·¨ÏòÁ¿
+	// ä»¥ä¸‹æˆå‘˜å˜é‡æ˜¯é€šè¿‡è®¡ç®—å¾—å‡º
+	int id; // è‡ªåŠ¨ç”Ÿæˆ
+	Point3 directions[MAX_POINTS]; // æ–¹å‘
+	Point3 normals[MAX_POINTS]; // æ³•å‘é‡
+	Point3 interplate_points[MAX_POINTS * INTERPLATE_NUM]; // æ’å€¼ç‚¹
+	Point3 interplate_direction[MAX_POINTS* INTERPLATE_NUM]; // æ’å€¼ç‚¹æ–¹å‘
+	Point3 interplate_normal[MAX_POINTS* INTERPLATE_NUM]; // æ’å€¼ç‚¹æ³•å‘é‡
 
 } st_road_line_t;
 typedef struct
 {
-	Point3 position; // ÊÀ½ç×ø±ê
-	Point3 direction; // Â·Ïß·½Ïò
-	Point3 norm; // ·¨Ïß·½Ïò
+	Point3 position; // ä¸–ç•Œåæ ‡
+	Point3 direction; // è·¯çº¿æ–¹å‘
+	Point3 norm; // æ³•çº¿æ–¹å‘
 	int licheng;
 }st_line_point_info_t;
 
-int compute_direction_norm(st_road_line_t* line);	//·µ»Ø0±íÊ¾ÕıÈ·
-int compute_spline(const Point3* src, int src_count, Point3* dst, int dst_count, enum_interplate_type_t type);	//·µ»Ø0±íÊ¾ÕıÈ·£¬Êä³öÊÇÒ»¸öÒÑ¾­·ÖÅäºÃ´óĞ¡µÄÊı×é
-int compute_interplate(st_road_line_t* line);	//·µ»Ø0±íÊ¾ÕıÈ·
-Point3 find_point_at_licheng (const st_road_line_t* line, int licheng);	//·µ»ØÂ·Ïßµã¡£ÏÈÓÃ¶ş·Ö²éÕÒÈ·¶¨×î½üµÄ2¸ö²ÉÑùµã£¬È»ºó²åÖµÉú³É¡£
-int find_licheng_at_point(const st_road_line_t* line, Point3 point);	//·µ»ØÀï³Ì£¬½á¹û²»Î¨Ò»£¬È¡¾àÀëÂ·ÏßÖĞĞÄÏß×î½üµÄµãµÄÀï³Ì¡£ĞèÒª¶Ô²ÉÑùµã½¨Á¢kdÊ÷£¬È»ºóÕÒµ½×î½üµÄ2¸ö£¬×÷Í¶Ó°
+int compute_direction_norm(st_road_line_t* line);	//è¿”å›0è¡¨ç¤ºæ­£ç¡®
+int compute_spline(const Point3* src, int src_count, Point3* dst, int dst_count, enum_interplate_type_t type);	//è¿”å›0è¡¨ç¤ºæ­£ç¡®ï¼Œè¾“å‡ºæ˜¯ä¸€ä¸ªå·²ç»åˆ†é…å¥½å¤§å°çš„æ•°ç»„
+int compute_interplate(st_road_line_t* line);	//è¿”å›0è¡¨ç¤ºæ­£ç¡®
+Point3 find_point_at_licheng (const st_road_line_t* line, int licheng);	//è¿”å›è·¯çº¿ç‚¹ã€‚å…ˆç”¨äºŒåˆ†æŸ¥æ‰¾ç¡®å®šæœ€è¿‘çš„2ä¸ªé‡‡æ ·ç‚¹ï¼Œç„¶åæ’å€¼ç”Ÿæˆã€‚
+int find_licheng_at_point(const st_road_line_t* line, Point3 point);	//è¿”å›é‡Œç¨‹ï¼Œç»“æœä¸å”¯ä¸€ï¼Œå–è·ç¦»è·¯çº¿ä¸­å¿ƒçº¿æœ€è¿‘çš„ç‚¹çš„é‡Œç¨‹ã€‚éœ€è¦å¯¹é‡‡æ ·ç‚¹å»ºç«‹kdæ ‘ï¼Œç„¶åæ‰¾åˆ°æœ€è¿‘çš„2ä¸ªï¼Œä½œæŠ•å½±

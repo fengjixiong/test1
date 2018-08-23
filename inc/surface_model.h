@@ -2,34 +2,34 @@ typedef struct
 {
 	int id;
 
-	// ÒÔÏÂ±äÁ¿ĞèÒª¸³Öµ
+	// ä»¥ä¸‹å˜é‡éœ€è¦èµ‹å€¼
 	const int MAX_LINE_NUM = 5;
-	int line_num; // Â·ÏßÊıÄ¿£¨µ¥Ïß¡¢Ë«Ïß£©
-	float line_intervals[MAX_LINE_NUM-1]; // Â·ÏßÖĞ¼ä¾àÀë
-	float line_sides[2]; // Â·ÃæÁ½¶Ë¾àÀë
+	int line_num; // è·¯çº¿æ•°ç›®ï¼ˆå•çº¿ã€åŒçº¿ï¼‰
+	float line_intervals[MAX_LINE_NUM-1]; // è·¯çº¿ä¸­é—´è·ç¦»
+	float line_sides[2]; // è·¯é¢ä¸¤ç«¯è·ç¦»
 
-	// ÒÔÏÂ±äÁ¿ĞèÒª¼ÆËã
-	Point2 draw_points[10]; //¶şÎ¬»æÖÆµã
+	// ä»¥ä¸‹å˜é‡éœ€è¦è®¡ç®—
+	Point2 draw_points[10]; //äºŒç»´ç»˜åˆ¶ç‚¹
 	
-	// ¹ØÁªÄ£ĞÍ
-	st_line_point_info_t* p_line_info; //Ä£ĞÍËù´¦ÏßÂ·µãĞÅÏ¢
-	void* p_parent; // ¸¸½Úµã
+	// å…³è”æ¨¡å‹
+	st_line_point_info_t* p_line_info; //æ¨¡å‹æ‰€å¤„çº¿è·¯ç‚¹ä¿¡æ¯
+	void* p_parent; // çˆ¶èŠ‚ç‚¹
 
 }st_road_surface_2d_t;
 
 typedef struct
 {
-	int id; // ×Ô¶¯Éú³É
+	int id; // è‡ªåŠ¨ç”Ÿæˆ
 
-	// ÒÔÏÂ±äÁ¿Í¨¹ı¼ÆËãµÃµ½£¬ÊÇÏà¶Ô×ø±ê£¬²Î¿¼µãÊÇstart_point
-	Point3 left_edge_points[INTERPLATE_NUM]; // ×ó²àÂ·ÃæºÍ±ßÆÂÁ¬½Óµã
-	Point3 right_edge_points[INTERPLATE_NUM]; // ÓÒ²àÂ·ÃæºÍ±ßÆÂÁ¬½Óµã
-	Point3 track_start_points[MAX_LINE_NUM] [INTERPLATE_NUM]; // Ìú¹ìÆğÊ¼µã
-	Point3 track_end_points[MAX_LINE_NUM] [INTERPLATE_NUM]; // Ìú¹ìÖÕµã
+	// ä»¥ä¸‹å˜é‡é€šè¿‡è®¡ç®—å¾—åˆ°ï¼Œæ˜¯ç›¸å¯¹åæ ‡ï¼Œå‚è€ƒç‚¹æ˜¯start_point
+	Point3 left_edge_points[INTERPLATE_NUM]; // å·¦ä¾§è·¯é¢å’Œè¾¹å¡è¿æ¥ç‚¹
+	Point3 right_edge_points[INTERPLATE_NUM]; // å³ä¾§è·¯é¢å’Œè¾¹å¡è¿æ¥ç‚¹
+	Point3 track_start_points[MAX_LINE_NUM] [INTERPLATE_NUM]; // é“è½¨èµ·å§‹ç‚¹
+	Point3 track_end_points[MAX_LINE_NUM] [INTERPLATE_NUM]; // é“è½¨ç»ˆç‚¹
 
-	// ¹ØÁªÄ£ĞÍ£¬ĞèÒª¸³Öµ
-	const st_road_surface_2d_t* p_2d_start; // 2DÂ·ÃæÄ£ĞÍ
-	const st_road_surface_2d_t* p_2d_end; // 2DÂ·ÃæÄ£ĞÍ
-	void* p_parent; // ¸¸½Úµã
+	// å…³è”æ¨¡å‹ï¼Œéœ€è¦èµ‹å€¼
+	const st_road_surface_2d_t* p_2d_start; // 2Dè·¯é¢æ¨¡å‹
+	const st_road_surface_2d_t* p_2d_end; // 2Dè·¯é¢æ¨¡å‹
+	void* p_parent; // çˆ¶èŠ‚ç‚¹
 
 }st_road_surface_3d_t;

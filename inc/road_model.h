@@ -1,52 +1,52 @@
 typedef struct
 {
 	int id;
-	// ÒÔÏÂ²ÎÊıĞèÒª¸³Öµ
+	// ä»¥ä¸‹å‚æ•°éœ€è¦èµ‹å€¼
 
-	// ¹ØÁªÄ£ĞÍ
-	st_line_point_info_t* p_line_info; //Ä£ĞÍËù´¦ÏßÂ·µãĞÅÏ¢
-	st_road_surface_2d_t* p_surface; // Â·Ãæ
+	// å…³è”æ¨¡å‹
+	st_line_point_info_t* p_line_info; //æ¨¡å‹æ‰€å¤„çº¿è·¯ç‚¹ä¿¡æ¯
+	st_road_surface_2d_t* p_surface; // è·¯é¢
 	st_bianpo_2d_t* p_bianpo_left;
 	st_bianpo_2d_t* p_bianpo_right;
-	void* p_parent; // ¸¸½Úµã
+	void* p_parent; // çˆ¶èŠ‚ç‚¹
 
 }st_road_point_2d_ t;
 typedef struct
 {
 	int id;
-	// ÒÔÏÂ²ÎÊıĞèÒª¸³Öµ
-	Point3 ground_point; // µØÃæµã
-	int width; // ÇÅ¿í
-	int pier_interval; // ÇÅ¶Õ¼ä¸ô
+	// ä»¥ä¸‹å‚æ•°éœ€è¦èµ‹å€¼
+	Point3 ground_point; // åœ°é¢ç‚¹
+	int width; // æ¡¥å®½
+	int pier_interval; // æ¡¥å¢©é—´éš”
 
-	// ¹ØÁªÄ£ĞÍ
-	st_line_point_info_t* p_line_info; //Ä£ĞÍËù´¦ÏßÂ·µãĞÅÏ¢
-	st_road_surface_2d_t* p_surface; // Â·Ãæ
-	void* p_parent; // ¸¸½Úµã
+	// å…³è”æ¨¡å‹
+	st_line_point_info_t* p_line_info; //æ¨¡å‹æ‰€å¤„çº¿è·¯ç‚¹ä¿¡æ¯
+	st_road_surface_2d_t* p_surface; // è·¯é¢
+	void* p_parent; // çˆ¶èŠ‚ç‚¹
 
 }st_road_point_2d_ t;
 typedef struct
 {
 	int id;
-	// ÒÔÏÂ²ÎÊıĞèÒª¸³Öµ
-	Point3 ground_point; // µØÃæµã
-	int width; // ËíµÀ¿í
-	int height; // ËíµÀ¸ß
+	// ä»¥ä¸‹å‚æ•°éœ€è¦èµ‹å€¼
+	Point3 ground_point; // åœ°é¢ç‚¹
+	int width; // éš§é“å®½
+	int height; // éš§é“é«˜
 
-	// ¹ØÁªÄ£ĞÍ
-	st_line_point_info_t* p_line_info; //Ä£ĞÍËù´¦ÏßÂ·µãĞÅÏ¢
-	st_road_surface_2d_t* p_surface; // Â·Ãæ
-	void* p_parent; // ¸¸½Úµã
+	// å…³è”æ¨¡å‹
+	st_line_point_info_t* p_line_info; //æ¨¡å‹æ‰€å¤„çº¿è·¯ç‚¹ä¿¡æ¯
+	st_road_surface_2d_t* p_surface; // è·¯é¢
+	void* p_parent; // çˆ¶èŠ‚ç‚¹
 
 }st_tunnel_point_2d_ t;
 
 typedef struct
 {
 	int id;
-	// ÒÔÏÂ²ÎÊıĞèÒª¸³Öµ
-	// ¹ØÁªÄ£ĞÍ
-	st_road_point_2d_t* p_2d; //Ä£ĞÍËù´¦ÏßÂ·µãĞÅÏ¢
-	st_road_surface_3d_t* p_surface; // Â·Ãæ
+	// ä»¥ä¸‹å‚æ•°éœ€è¦èµ‹å€¼
+	// å…³è”æ¨¡å‹
+	st_road_point_2d_t* p_2d; //æ¨¡å‹æ‰€å¤„çº¿è·¯ç‚¹ä¿¡æ¯
+	st_road_surface_3d_t* p_surface; // è·¯é¢
 	st_bianpo_3d_t* p_bianpo_left;
 	st_bianpo_3d_t* p_bianpo_right;
 	st_bridge_3d_t* p_bridge;
@@ -55,22 +55,22 @@ typedef struct
 typedef struct
 {
 	int id;
-	// ÒÔÏÂ²ÎÊıĞèÒª¸³Öµ
+	// ä»¥ä¸‹å‚æ•°éœ€è¦èµ‹å€¼
 
-	// ¹ØÁªÄ£ĞÍ
+	// å…³è”æ¨¡å‹
 	st_bridge_point_2d_t* p_2d_start; 
 	st_bridge_point_2d_t* p_2d_end;
-	void* p_parent; // ¸¸½Úµã
+	void* p_parent; // çˆ¶èŠ‚ç‚¹
 
 }st_bridge_point_3d_ t;
 typedef struct
 {
 	int id;
-	// ÒÔÏÂ²ÎÊıĞèÒª¸³Öµ
+	// ä»¥ä¸‹å‚æ•°éœ€è¦èµ‹å€¼
 
-	// ¹ØÁªÄ£ĞÍ
+	// å…³è”æ¨¡å‹
 	st_tunnel_point_2d_t* p_2d_start; 
 	st_tunnel_point_2d_t* p_2d_end;
-	void* p_parent; // ¸¸½Úµã
+	void* p_parent; // çˆ¶èŠ‚ç‚¹
 
 }st_tunnel_point_3d_ t;

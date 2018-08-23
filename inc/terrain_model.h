@@ -6,42 +6,42 @@ typedef struct
 typedef struct
 {
 	int id;
-	// ÒÔÏÂ±äÁ¿ĞèÒª¸³Öµ
-	st_line_point_info_t* p_line_info; //Ä£ĞÍËù´¦ÏßÂ·µãĞÅÏ¢
-	Point2 point_x [20]; // Ïà¶Ô²Î¿¼µãµÄ×ø±ê(x, y)
+	// ä»¥ä¸‹å˜é‡éœ€è¦èµ‹å€¼
+	st_line_point_info_t* p_line_info; //æ¨¡å‹æ‰€å¤„çº¿è·¯ç‚¹ä¿¡æ¯
+	Point2 point_x [20]; // ç›¸å¯¹å‚è€ƒç‚¹çš„åæ ‡(x, y)
 } st_ground_2d
 
 typedef struct
 {
 	int id;
-	// ÒÔÏÂÓÉ¼ÆËãµÃ³ö
+	// ä»¥ä¸‹ç”±è®¡ç®—å¾—å‡º
 	int p1_index;
 	int p2_index;
-	// ¹ØÁªÄ£ĞÍ
+	// å…³è”æ¨¡å‹
 	st_point3_array_t* p_point3_array;
 }st_edge_t;
 typedef struct
 {
 	int id;
-	// ÒÔÏÂÓÉ¼ÆËãµÃ³ö
+	// ä»¥ä¸‹ç”±è®¡ç®—å¾—å‡º
 	int p1_index;
 	int p2_index;
 	int p3_index;
 	st_Edge_t edge1;
 	st_Edge_t edge2;
 	st_Edge_t edge3;
-	// ¹ØÁªÄ£ĞÍ
+	// å…³è”æ¨¡å‹
 	st_point3_array_t* p_point3_array;
 }st_triangle_t;
 typedef struct
 {
 	int id;
-	// ÒÔÏÂ²ÎÊı±ØĞë¸³Öµ
+	// ä»¥ä¸‹å‚æ•°å¿…é¡»èµ‹å€¼
 	st_point3_array_t* p_point3_array;
-	// ÒÔÏÂ²ÎÊıÓÉ¼ÆËãÉú³É
+	// ä»¥ä¸‹å‚æ•°ç”±è®¡ç®—ç”Ÿæˆ
 	int triangle_num;
 	st_triangle_t* p_triangles;
-	KDTree* p_tree; // kd-treeÄ£ĞÍ£¬·½±ã¿Õ¼ä²éÕÒ
+	KDTree* p_tree; // kd-treeæ¨¡å‹ï¼Œæ–¹ä¾¿ç©ºé—´æŸ¥æ‰¾
 }st_delaunay_t;
 typedef struct
 {

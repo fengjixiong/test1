@@ -12,24 +12,24 @@ typedef enum
 typedef struct
 {
 	int id;
-	// ÒÔÏÂ²ÎÊıĞèÒª¸³Öµ
-	int huanpo_width; // »ºÆÂ¿í
-	enum_road_type_t start_type; // ÆğÊ¼¶ËÀàĞÍ
+	// ä»¥ä¸‹å‚æ•°éœ€è¦èµ‹å€¼
+	int huanpo_width; // ç¼“å¡å®½
+	enum_road_type_t start_type; // èµ·å§‹ç«¯ç±»å‹
 	
-	// ¹ØÁªÄ£ĞÍ
-	st_line_point_info_t* p_line_info; //Ä£ĞÍËù´¦ÏßÂ·µãĞÅÏ¢
+	// å…³è”æ¨¡å‹
+	st_line_point_info_t* p_line_info; //æ¨¡å‹æ‰€å¤„çº¿è·¯ç‚¹ä¿¡æ¯
 	st_road_point_t* p_road;
 	st_bridge_point_t* p_bridge;
 }st_road_bridge_connect_t;
 typedef struct
 {
 	int id;
-	// ÒÔÏÂ²ÎÊıĞèÒª¸³Öµ
-	int huanpo_width; // »ºÆÂ¿í
-	enum_road_type_t start_type; // ÆğÊ¼¶ËÀàĞÍ
+	// ä»¥ä¸‹å‚æ•°éœ€è¦èµ‹å€¼
+	int huanpo_width; // ç¼“å¡å®½
+	enum_road_type_t start_type; // èµ·å§‹ç«¯ç±»å‹
 
-	// ¹ØÁªÄ£ĞÍ
-	st_line_point_info_t* p_line_info; //Ä£ĞÍËù´¦ÏßÂ·µãĞÅÏ¢
+	// å…³è”æ¨¡å‹
+	st_line_point_info_t* p_line_info; //æ¨¡å‹æ‰€å¤„çº¿è·¯ç‚¹ä¿¡æ¯
 	st_road_point_t* p_road;
 	st_tunnel_point_t* p_bridge;
 }st_road_tunnel_connect_t;
