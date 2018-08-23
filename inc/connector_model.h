@@ -1,3 +1,5 @@
+#include "global_model.h"
+
 #ifndef _CONNECTOR_MODEL_H
 #define _CONNECTOR_MODEL_H
 

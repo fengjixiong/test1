@@ -1,3 +1,6 @@
+#include "global_model.h"
+#include "line_model.h"
+
 typedef struct
 {
 	int id;

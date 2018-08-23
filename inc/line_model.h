@@ -1,3 +1,5 @@
+#include "global_model.h"
+
 typedef enum
 {
 	INTERPLATE_UNKOWN = 0, // 未知
