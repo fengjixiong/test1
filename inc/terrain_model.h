@@ -48,7 +48,7 @@ typedef struct
 	// 以下参数由计算生成
 	int triangle_num;
 	st_triangle_t* p_triangles;
-	//kdtree* p_tree; // kd-tree模型，方便空间查找
+	void* p_tree; // kd-tree模型，方便空间查找
 }st_delaunay_t;
 typedef struct
 {
