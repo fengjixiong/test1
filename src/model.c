@@ -3,5 +3,5 @@
 
 void model_test()
 {
-	
+  printf("hello, model\n");	
 }

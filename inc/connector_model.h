@@ -1,6 +1,6 @@
-#include "global_model.h"
+
 #include "road_model.h"
-#include "line_model.h"
+
 
 #ifndef _CONNECTOR_MODEL_H
 #define _CONNECTOR_MODEL_H

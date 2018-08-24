@@ -1,0 +1,29 @@
+digraph G {
+bianpo_model -> { 
+ line_model
+}
+
+connector_model -> { 
+ road_model
+}
+
+
+line_model -> { 
+ global_model
+}
+
+road_model -> { 
+ bianpo_model
+ surface_model
+}
+
+surface_model -> { 
+ line_model
+}
+
+
+terrain_model -> { 
+ line_model
+ kdtree
+}
+}
