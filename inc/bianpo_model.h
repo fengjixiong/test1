@@ -30,7 +30,7 @@ typedef struct
 }st_paishuigou_2d_t;   //排水沟
 typedef struct
 {
-	int id；
+	int id;
 	// 以下参数需要赋值
 	/******** for input ctr *****************/
 	int qs; //墙式
@@ -68,11 +68,14 @@ typedef struct
 	void* p_parent; // 父节点
 
 }st_dangtuqiang_2d_t;
+
+#define MAX_LEVEL (7) // 最多7级边坡
+
 typedef struct
 {
 int id;
 // 以下参数需要赋值
-	const char MAX_LEVEL = 7; // 最多7级边坡
+	
 	char level_count; // 当前有几级边坡，级数从路线向外的方向
 	enum_bianpo_type_t type; // 边坡类型（1-路基，2-路堑）
 	float	width [MAX_LEVEL]; // 边坡宽度
@@ -80,7 +83,7 @@ int id;
 	float	pingtai_width[MAX_LEVEL ]; // 层级之间的平台宽
 	
 	// 以下参数需要计算
-	Point2 outline[[MAX_LEVEL][8]j // 8个点已经考虑了并入排水沟后的轮廓线
+	Point2 outline[MAX_LEVEL][8]; // 8个点已经考虑了并入排水沟后的轮廓线
 
 	// 关联模型
 	st_line_point_info_t* p_line_info; //模型所处线路点信息
@@ -103,8 +106,8 @@ typedef struct
 	Point3 up_points[20]; // 与地面相接的点
 
 	//关联模型
-	const st_paishuigou_2d_t* p_2d _start;
-	const st_paishuigou_2d_t* p_2d _end;
+	const st_paishuigou_2d_t* p_2d_start;
+	const st_paishuigou_2d_t* p_2d_end;
 	void* p_parent; // 父节点
 
 }st_paishuigou_3d_t;
@@ -119,8 +122,8 @@ typedef struct
 	Point3 end_side_points[20]; // 终止端坡点
 
 	//关联模型
-	const st_dangtuqiang_2d_t* p_2d _start;
-	const st_dangtuqiang_2d_t* p_2d _end;
+	const st_dangtuqiang_2d_t* p_2d_start;
+	const st_dangtuqiang_2d_t* p_2d_end;
 	void* p_parent; // 父节点
 
 }st_dangtuqiang_3d_t;
@@ -137,8 +140,8 @@ typedef struct
 	Point3 ground_points[20]; // 与地面相接的点
 
 	//关联模型，须赋值
-	const st_bianpo_2d_t* p_2d _start;
-	const st_bianpo_2d_t* p_2d _end;
+	const st_bianpo_2d_t* p_2d_start;
+	const st_bianpo_2d_t* p_2d_end;
 	void* p_parent; // 父节点
 
 } st_bianpo_3d_t;

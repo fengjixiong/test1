@@ -1,4 +1,6 @@
 #include "global_model.h"
+#include "road_model.h"
+#include "line_model.h"
 
 #ifndef _CONNECTOR_MODEL_H
 #define _CONNECTOR_MODEL_H
@@ -20,9 +22,9 @@ typedef struct
 	
 	// 关联模型
 	st_line_point_info_t* p_line_info; //模型所处线路点信息
-	st_road_point_t* p_road;
-	st_bridge_point_t* p_bridge;
-}st_road_bridge_connect_t;
+	st_road_point_2d_t* p_road;
+	st_bridge_point_2d_t* p_bridge;
+}st_road_bridge_connect_2d_t;
 typedef struct
 {
 	int id;
@@ -32,8 +34,8 @@ typedef struct
 
 	// 关联模型
 	st_line_point_info_t* p_line_info; //模型所处线路点信息
-	st_road_point_t* p_road;
-	st_tunnel_point_t* p_bridge;
-}st_road_tunnel_connect_t;
+	st_road_point_2d_t* p_road;
+	st_tunnel_point_2d_t* p_bridge;
+}st_road_tunnel_connect_2d_t;
 
 #endif

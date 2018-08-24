@@ -1,12 +1,16 @@
 #include "global_model.h"
 #include "line_model.h"
 
+#ifndef _SURFACE_MODEL_H
+#define _SURFACE_MODEL_H
+
+#define MAX_LINE_NUM (5)
 typedef struct
 {
 	int id;
 
 	// 以下变量需要赋值
-	const int MAX_LINE_NUM = 5;
+	
 	int line_num; // 路线数目（单线、双线）
 	float line_intervals[MAX_LINE_NUM-1]; // 路线中间距离
 	float line_sides[2]; // 路面两端距离
@@ -36,3 +40,5 @@ typedef struct
 	void* p_parent; // 父节点
 
 }st_road_surface_3d_t;
+
+#endif

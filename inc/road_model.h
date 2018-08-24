@@ -1,3 +1,11 @@
+#include "global_model.h"
+#include "line_model.h"
+#include "bianpo_model.h"
+#include "surface_model.h"
+
+#ifndef _ROAD_MODEL_H
+#define _ROAD_MODEL_H
+
 typedef struct
 {
 	int id;
@@ -10,7 +18,7 @@ typedef struct
 	st_bianpo_2d_t* p_bianpo_right;
 	void* p_parent; // 父节点
 
-}st_road_point_2d_ t;
+}st_road_point_2d_t;
 typedef struct
 {
 	int id;
@@ -24,7 +32,7 @@ typedef struct
 	st_road_surface_2d_t* p_surface; // 路面
 	void* p_parent; // 父节点
 
-}st_road_point_2d_ t;
+}st_bridge_point_2d_t;
 typedef struct
 {
 	int id;
@@ -38,7 +46,7 @@ typedef struct
 	st_road_surface_2d_t* p_surface; // 路面
 	void* p_parent; // 父节点
 
-}st_tunnel_point_2d_ t;
+}st_tunnel_point_2d_t;
 
 typedef struct
 {
@@ -49,9 +57,10 @@ typedef struct
 	st_road_surface_3d_t* p_surface; // 路面
 	st_bianpo_3d_t* p_bianpo_left;
 	st_bianpo_3d_t* p_bianpo_right;
-	st_bridge_3d_t* p_bridge;
-	st_tunnel_cave_3d_t* p_tunnel;
+	//st_bridge_3d_t* p_bridge;
+	//st_tunnel_cave_3d_t* p_tunnel;
 } st_road_point_3d_t;
+
 typedef struct
 {
 	int id;
@@ -62,7 +71,7 @@ typedef struct
 	st_bridge_point_2d_t* p_2d_end;
 	void* p_parent; // 父节点
 
-}st_bridge_point_3d_ t;
+}st_bridge_point_3d_t;
 typedef struct
 {
 	int id;
@@ -73,4 +82,6 @@ typedef struct
 	st_tunnel_point_2d_t* p_2d_end;
 	void* p_parent; // 父节点
 
-}st_tunnel_point_3d_ t;
+}st_tunnel_point_3d_t;
+
+#endif
