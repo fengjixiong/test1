@@ -17,30 +17,6 @@
 #include "vtdata/DataPath.h"
 #include "vtdata/vtLog.h"
 
-#if 1
-#pragma comment(lib, "../../terrainsdk/vtlib/vtosg/debug/vtlib.lib")
-#pragma comment(lib, "../../terrainsdk/vtdata/debug/vtdata.lib")
-#pragma comment(lib, "../../terrainsdk/minidata/debug/minidata.lib")
-#pragma comment(lib, "../../terrainsdk/xmlhelper/debug/xmlhelper.lib")
-#pragma comment(lib, "E:\\tools\\vterrain\\WinAPIs-1104\\APIs\\libcurl-7.21.3\\vc9\\libcurl-static.lib")
-#pragma comment(lib,"OpenThreadsd.lib")
-#pragma comment(lib,"osgAnimationd.lib")
-#pragma comment(lib,"osgd.lib")
-#pragma comment(lib,"osgDBd.lib")
-#pragma comment(lib,"osgFXd.lib")
-#pragma comment(lib,"osgGAd.lib")
-#pragma comment(lib,"osgManipulatord.lib")
-#pragma comment(lib,"osgParticled.lib")
-#pragma comment(lib,"osgPresentationd.lib")
-#pragma comment(lib,"osgShadowd.lib")
-#pragma comment(lib,"osgSimd.lib")
-#pragma comment(lib,"osgTerraind.lib")
-#pragma comment(lib,"osgTextd.lib")
-#pragma comment(lib,"osgUtild.lib")
-#pragma comment(lib,"osgViewerd.lib")
-#pragma comment(lib,"osgVolumed.lib")
-#pragma comment(lib,"osgWidgetd.lib")
-#endif
 
 vtTerrainScene *g_terrscene;
 
