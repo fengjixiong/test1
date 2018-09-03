@@ -1,0 +1,28 @@
+digraph G
+{
+  	rankdir=LR;
+	subgraph cluster0
+	{
+		label="static lib";
+		style=filled;
+		color="#ddddee";
+		lib2 [label="lib2.lib"];
+		test_lib2 [label="test_lib2\nexe"];
+		test_lib2 -> lib2;
+	}
+	subgraph cluster1
+	{
+		label="dynamic lib";
+		style=filled;
+		color="#eeeddd";
+		lib3 [label="lib3.dll"];
+		test_lib3 [label="test_lib3\nexe"];
+		test_lib3 -> lib3;
+		
+	}
+	lib1 [label="lib1.lib"];
+	lib2 -> lib1;
+	test_lib2 -> lib1 [color=red label="need link lib1"];
+	test_lib3 -> lib1 [style=dotted,color=red, label="no need link lib1"];
+	lib3 -> lib1;
+}

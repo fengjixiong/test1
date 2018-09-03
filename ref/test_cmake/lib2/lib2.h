@@ -1,0 +1,1 @@
+int compute2(int a, int b);
